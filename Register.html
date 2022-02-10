@@ -7,6 +7,7 @@
     
     <title>Registration</title>
 
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <script src="https://kit.fontawesome.com/aa0a2e646f.js" crossorigin="anonymous"></script>
         
     <link rel="stylesheet" type="text/css" href="css/Register.css">
@@ -35,18 +36,19 @@
                         <div class="col-sm-6"><br><br>
                             <h1 class="font-weight-bold">Register / Signup</h1>
                             <form method="get" action="Account.html">
-                                <input class="form-control" type="text" name="Fullname" id="fullname" placeholder="Full Name"><br>
-                                <input class="form-control" type="email" name="email" id="email" placeholder="Email address"><br>
-                                <input class="form-control" type="password" name="password" id="pwrd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/> 
+                                <input class="form-control" type="text" name="Fullname" id="fullname" placeholder="Full Name" required><br>
+                                <input onkeypress="return RestrictSpace();" class="form-control" type="email" name="email" id="email" placeholder="Email address" required><br>
+                                <input  onkeypress="return RestrictSpace();" class="form-control" type="password" name="password" id="pwrd" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/> 
                                 <i onclick="myFunction()" class="far fa-eye eye" id="toggle" style="margin-right: 10px; cursor: pointer;"></i><br>
+
                                 <div id="message">
                                     <h3>Password must contain the following:</h3>
                                     <p id="letter" class="invalid"></i>A <b>lowercase</b> letter</p>
-                                    <p id="capital" class="invalid"></i>A <b>capital (uppercase)</b> letter</p>
+                                    <p id="capital" class="invalid"></i>A <b>capital ( ppercase)</b> letter</p>
                                     <p id="number" class="invalid"></i>A <b>number</b></p>
-                                    <p id="length" class="invalid"></i>Minimum <b>8 characters</b></p>
-                                </div>
-                                <button class="btn btn-primary text-center font-weight-bold" onclick="btnfunc();" style="font-size: 20px;">Register / Signup</button><br>
+                                    <p id="length" class="invalid"></i>Minimum <b>8 characters</b></p> 
+                                </div><br>
+                                <button id="btn" class="btn btn-primary text-center font-weight-bold" style="font-size: 20px;">Register / Signup</button><br>
                                 
                                 
                             </form>

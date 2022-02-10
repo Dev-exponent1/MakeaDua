@@ -35,8 +35,8 @@
                         <div class="col-sm-6 login">
                             <h1 class="font-weight-bold">Login / Sign in</h1>
                             <form method="get" action="Account.html">
-                                <input class="form-control" type="text" name="email" id="email" placeholder="Email"><br>
-                                <input class="form-control" type="password" name="password" id="password" placeholder="Password"><br>                                                            
+                                <input onkeypress="return RestrictSpace();" class="form-control" type="text" name="email" id="email" placeholder="Email"><br>
+                                <input onkeypress="return RestrictSpace();" class="form-control" type="password" name="password" id="password" placeholder="Password"><br>                                                            
                                 
 
                         </div>
@@ -150,6 +150,6 @@
         </div>
     </div>
 
-      <script src="/js/Login.js"></script>
+      <script src="js/Login.js"></script>
 </body> 
 </html>

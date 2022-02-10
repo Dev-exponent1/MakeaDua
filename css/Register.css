@@ -50,6 +50,7 @@ hr{
     
 }
 
+
 h1{
     margin-top: 30px;
     margin-bottom: 20px;
@@ -57,12 +58,13 @@ h1{
     color: #6EC37F;
 }
 
+
 .form-control{
     background: transparent;
     border-color: 1px black;
     border-radius: 30;
-    font: size 20px;
 }
+
 
 .eye{
     float: right;
@@ -89,13 +91,13 @@ h3{
     font-size: 10px;
   }
   
-  /* Add a green text color and a checkmark when the requirements are right */
+  /* Add a green text color when the requirements are right */
   .valid {
     color: rgb(37, 190, 37);
   }
   
   
-  /* Add a red text color and an "x" icon when the requirements are wrong */
+  /* Add a red text color when the requirements are wrong */
   .invalid {
     color: red;
   }

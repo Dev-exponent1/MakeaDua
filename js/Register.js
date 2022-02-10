@@ -1,45 +1,49 @@
-function myFunction() {
-    var x = document.getElementById("pwrd");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
-  }
-
-
-
+var paswrd = document.getElementById("pwrd");
 var myInput = document.getElementById("pwrd");
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
 var length = document.getElementById("length");
 var fname = document.getElementById("fullname");
+var email = document.getElementById("email");  
+var form = document.getElementById("regform")
 
-
-function btnfunc(){
-if(fname.value === "" || fname.value > 20){
-    alert("Please enter a valid name of 20 characters!");
-    return;
+function RestrictSpace() {
+  if (event.keyCode == 32) {
+      return false;
+  }
 }
 
 
-}
+
+function myFunction() {
+    if (paswrd.type === "password") {
+      paswrd.type = "text";
+    } else {
+      paswrd.type = "password";
+    }
+  }
+
+
+
+
 
 
 // When the user clicks on the password field, show the message box
 myInput.onfocus = function() {
+  if((letter.className === "valid") && (capital.className === "valid") && (number.className === "valid") && (length.className === "valid")){
+    document.getElementById("message").style.display = "none";
+  }
+  else{
   document.getElementById("message").style.display = "block";
+  }
 }
 
-// When the user clicks outside of the password field, hide the message box
-myInput.onblur = function() {
-  document.getElementById("message").style.display = "none";
-}
 
 // When the user starts to type something inside the password field
 myInput.onkeyup = function() {
   // Validate lowercase letters
+
   var lowerCaseLetters = /[a-z]/g;
   if(myInput.value.match(lowerCaseLetters)) {
     letter.classList.remove("invalid");
@@ -77,4 +81,32 @@ myInput.onkeyup = function() {
     length.classList.remove("valid");
     length.classList.add("invalid");
   }
+
+
+
+  if ((letter.className === "valid") && (capital.className === "valid") && (number.className === "valid") && (length.className === "valid")){
+    document.getElementById("message").style.display = "none";
+  }
+  else{
+    document.getElementById("message").style.display = "block";
+    }
+
 }
+
+
+
+var btn = document.getElementById("btn").addEventListener('click' , function(event){
+  
+  if (paswrd.type === "text") {
+    paswrd.type = "password"; 
+  }
+
+  if(fname.value.trim() === ""){
+    event.preventDefault();
+  }
+
+})
+
+
+
+
