@@ -119,44 +119,13 @@ hr{
     margin-left: 20px;
 }
 
-.lady{
-    height: 400px;
-    border-radius: 20px;
-   max-width: 100%;
-    border-top-left-radius: 120px;
-    border-top-right-radius: 120px;
+.make{
+   width: 100%;
     filter: none;
     object-fit: cover;
 }
 
-.meka{
-    height: 400px;
-    border-radius: 20px;
-    max-width: 100%;
-   border-bottom-right-radius: 120px;
-   border-bottom-left-radius: 120px;
-   filter: none;
-    object-fit: cover;
-}
-.quran{
-    height: 190px;
-    border-radius: 20px;
-    max-width: 100%;
-   border-top-right-radius: 120px;
-   border-top-left-radius: 120px;
-   filter: none;
-    object-fit: cover;
-}
-.man{
-    height: 190px;
-    border-radius: 20px;
-    max-width: 100%;
-    margin-top: 20px;
-    border-bottom-right-radius: 120px;
-   border-bottom-left-radius: 120px;
-   filter: none;
-    object-fit: cover;
-}
+
 .text2{
     color: #6BC57D;
     font-size: 25px;
@@ -295,22 +264,21 @@ hr{
     position: relative;
     top: -25px;
     right: -15px;
-    width: 700px;
+    width: 600px;
     height: 100px;
     z-index: 999;
 } 
 
- /* @media screen and (max-width:400px) {
+  @media(max-width:1000px) {
     #animation:hover{
-
         position: relative;
         top: -25px;
         right: -15px;
-        width: 700px;
+        width: 300px;
         height: 100px;
        
     }
-}  */
+}  
 @media(max-width: 1000px) {
     .toggle-but{
         display: flex;

@@ -13,14 +13,17 @@ body{
 
 
 
-
+.nav-text{
+	margin-left: 80px;
+	font-size: 100px;
+}
 
 .wrapper .sidebar{
 	background: white;
 	position: relative;
 	top: 0;
 	left: 0;
-	margin-top: 10px;
+	margin-top: 50px;
 	padding: 20px 0;
 	border-radius: 0 60px 60px 0;
 	transition: all 0.5s ease;
@@ -192,7 +195,12 @@ body.active .wrapper .section{
 } 
 
 
-
+.nav22{
+	height: 50px;
+	width: 100%;
+	position: relative;
+	background: linear-gradient(95.15deg, #F2F6FF 13.98%, #FFFFFF 106.1%)
+}
 .top-header li:hover{
 	background-color: white;
 	border-radius: 10px;
@@ -237,13 +245,15 @@ color: black;
 .box1{
 	border: 2px solid white;
 	border-radius: 10px;
-	padding: 10px 10px;
+	padding: 10px 15px;
+	text-align: center;
 }
 .box2{
 	border: 2px solid white;
 	border-radius: 10px;
 	padding: 10px 10px;
-	margin-top: 20px;
+	margin-top: 20px; 
+	
 }
 table{
 	border-collapse: separate;
@@ -254,9 +264,24 @@ td,th{
 	padding: 10px 10px;
 	background-color: white;
 }
-tbody{
+ tbody{
 	text-align: center ;
-}
+} 
+body { 
+    font-size: 150%; 
+  }
+  
+  h2 {
+    text-align: center;
+    padding: 20px 0;
+  }
+ 
+  table.dataTable th,
+  table.dataTable td {
+    white-space: nowrap;
+  }
+  
+
 
 @media screen and (max-width:700px){
 	
@@ -279,8 +304,7 @@ tbody{
 	td:nth-child(4)::before{
 		content: "Shared";
 	}
-	
-	td.events:nth-child(4)::before{
+	#table1 td:nth-child(4)::before{
 		content: "Dates";
 	}
 	td::before{
@@ -297,11 +321,13 @@ tbody{
 
 
  .hamburger{
-	background-color: black;
+	/* background-color: black; */
 	width: 30px;
-	float: right;
-	position: relative;
-	top: 27px;
+	/* float: right; */
+	position: absolute;
+	/* top: 27px; */
+	right:0px;
+	top:0px;
 	text-align: center;
 	margin-right: 20px;
 	display: none;
@@ -440,4 +466,10 @@ margin-left: 40px;
 	margin-left: 20px;
 	
 }
+}
+
+@media screen and (max-width:600px) {
+	.tbdata{
+		padding-left: 25px
+	}
 }
