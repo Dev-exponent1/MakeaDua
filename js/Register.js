@@ -102,7 +102,7 @@ var btn = document.getElementById("btn").addEventListener('click' , function(eve
   }
 
   if(fname.value.trim() === ""){
-    event.preventDefault();
+    fname.value = "";
   }
 
 })
