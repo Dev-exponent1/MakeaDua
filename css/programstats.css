@@ -285,29 +285,27 @@ body {
 
 @media screen and (max-width:700px){
 	
-	td{
+	#table2 td{
 		display: block;
 		text-align: right;
 	}
-	th{
+	#table2 th{
 		display: none;
 	}
-	td:nth-child(1)::before{
+	#table2 td:nth-child(1)::before{
 		content: "Posts";
 	}
-	td:nth-child(2)::before{
+	#table2 td:nth-child(2)::before{
 		content: "Likes";
 	}
-	td:nth-child(3)::before{
+	#table2 td:nth-child(3)::before{
 		content: "Comments";
 	}
-	td:nth-child(4)::before{
+	#table2 td:nth-child(4)::before{
 		content: "Shared";
 	}
-	#table1 td:nth-child(4)::before{
-		content: "Dates";
-	}
-	td::before{
+	
+	#table2 td::before{
 		float: left;
 		margin-right: 3rem;
 	}
