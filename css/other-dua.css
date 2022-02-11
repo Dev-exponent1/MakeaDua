@@ -1,0 +1,56 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background: linear-gradient(95.15deg, #F2F6FF 13.98%, #FFFFFF 106.1%);
+}
+
+
+
+.prayer{
+    margin-top: 110px;
+}
+
+
+.title{
+    font-weight: bolder;
+    font-size: 17px;
+    color: black;
+    margin-bottom: 40px;
+}
+
+
+.picture{
+
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+}
+
+.information{
+    background-color: white;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+
+}
+
+
+.information >input{
+    margin-bottom: 10px;
+}
+
+.picture i{
+    color: green;
+    font-size: 170px;
+}
+
+
+
+
+@media (max-width: 767px){
+    .information{
+        margin-left: 0%;
+    }
+}
