@@ -262,6 +262,7 @@ table{
 }
 td,th{
 	padding: 10px 10px;
+	padding-left: 3px;
 	background-color: white;
 }
  tbody{
@@ -280,32 +281,36 @@ body {
   table.dataTable td {
     white-space: nowrap;
   }
+
   
 
 
-@media screen and (max-width:700px){
+@media screen and (max-width:500px){
 	
-	#table2 td{
+	td{
 		display: block;
 		text-align: right;
 	}
-	#table2 th{
+	th{
 		display: none;
 	}
-	#table2 td:nth-child(1)::before{
+	td:nth-child(1)::before{
 		content: "Posts";
 	}
-	#table2 td:nth-child(2)::before{
+	 td:nth-child(2)::before{
 		content: "Likes";
 	}
-	#table2 td:nth-child(3)::before{
+	 td:nth-child(3)::before{
 		content: "Comments";
 	}
-	#table2 td:nth-child(4)::before{
+	td:nth-child(4)::before{
 		content: "Shared";
 	}
+	#table1 td:nth-child(4)::before{
+			content: "Dates";
+	}
 	
-	#table2 td::before{
+	td::before{
 		float: left;
 		margin-right: 3rem;
 	}
