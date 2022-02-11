@@ -13,6 +13,15 @@ body{
 
 
 
+div a{
+	font-weight: bolder;
+	color: white;
+}
+div a:hover{
+	color: #a2ecff;
+	font-weight: bolder;
+	text-decoration: none;
+}
 
 
 .wrapper .sidebar{
