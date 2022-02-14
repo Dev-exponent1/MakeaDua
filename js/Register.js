@@ -9,7 +9,7 @@ var email = document.getElementById("email");
 var form = document.getElementById("regform")
 
 function RestrictSpace() {
-  if (event.keyCode == 32) {
+  if (event.key == "spacebar") {
       return false;
   }
 }
@@ -103,6 +103,16 @@ var btn = document.getElementById("btn").addEventListener('click' , function(eve
 
   if(fname.value.trim() === ""){
     fname.value = "";
+    fname.classList.add("is-invalid");
+  }
+
+  if (email.value.trim() === ""){
+    email.classList.add("is-invalid");
+    
+  }
+
+  if (paswrd.value.trim() === ""){
+    paswrd.classList.add("is-invalid"); 
   }
 
 })

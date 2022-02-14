@@ -24,7 +24,7 @@
             <div class="heading fit-content">
                 <h2 style="text-align:left;float:left;" class="web-title"><a href="index.html" style="text-decoration: none; color: black;">MakeaDua</a></h2> 
                 
-                <h6 style="text-align:right;float:right; font-weight: bold;"><a href="Login.html" style="color: #6EC37F;">Login</a>  / <a href="Register.html" style="color: #6EC37F;">Register</a> </h6><br><br>
+                <h6 style="text-align:right;float:right; font-weight: bold;"><a href="Login.html" style="color: #6EC37F; text-decoration: none;">Login</a>  / <a href="Register.html" style="color: #6EC37F; text-decoration: none;">Register</a> </h6><br><br>
             </div>
 
                     <div class="row">
@@ -35,9 +35,20 @@
                         <div class="col-sm-6 login">
                             <h1 class="font-weight-bold">Login / Sign in</h1>
                             <form method="get" action="Account.html">
+                              <div class="form-group">
                                 <input onkeypress="return RestrictSpace();" class="form-control" type="text" name="email" id="email" placeholder="Email" required><br>
-                                <input onkeypress="return RestrictSpace();" class="form-control" type="password" name="password" id="password" placeholder="Password" required><br>                                                            
+                                <div class="form-text" id="emailerror">Please enter a valid email</div>
+                              </div>
+                              <div class="form-group">
+                                <input onkeypress="return RestrictSpace();" class="form-control" type="password" name="password" id="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required><br>
+                                <i onclick="myFunction()" class="far fa-eye eye" id="toggle" style="margin-right: 10px; cursor: pointer;"></i><br>
+                                <div class="form-text" id="passworderror">Please enter a Password</div>
+                                <div id="errortext" class="form-text">Incorrect Email or Password</div>
+                                <div id="accounterror" class="form-text">You do not have an account with us, please Sign up</div>
                                 
+                              </div>
+                                                            
+                              
 
                         </div>
                         <div class="col-sm-2">  
@@ -48,7 +59,7 @@
 
                     </div>
                     <div class="row justify-content-center">
-                    <button class="btn btn-primary text-center font-weight-bold" style="font-size: 20px;"> Login / Sign in</button><br>
+                    <button class="btn btn-primary text-center font-weight-bold" style="font-size: 20px;" id="btn"> Login / Sign in</button><br>
                     </div>     
                     </form>
                     
@@ -88,7 +99,7 @@
                     <div class="text-center">
                     
                         
-                    <h4 class="sub"><a href="Register.html" style="color: #949494;">New User? Please Register here</a> </h4>
+                    <h4 class="sub"><a href="Register.html" style="color: #949494; text-decoration: none;">New User? Please Register here</a> </h4>
                     <br><br><br>
                     </div>
                     
