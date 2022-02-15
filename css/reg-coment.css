@@ -7,8 +7,9 @@
 
 
 body{
+	background-color: #f1ebeb;
+    font-family: sans-serif;
 	background: linear-gradient(95.15deg, #F2F6FF 13.98%, #FFFFFF 106.1%);
-    font-family: 'Roboto', sans-serif ;
 }
 
 
@@ -17,14 +18,18 @@ body{
 
 .wrapper .sidebar{
 	background: white;
-	position: relative;
 	top: 0;
 	left: 0;
-	margin-top: 10px;
+	margin-top: 150px;
 	padding: 20px 0;
 	border-radius: 0 60px 60px 0;
 	transition: all 0.5s ease;
 	box-shadow:  1px 1px 1px white;
+		overflow: hidden;
+		overflow-y: auto;
+		position: fixed;
+		top: 0;
+		z-index: 999;
 }
 
 
@@ -226,68 +231,18 @@ color: black;
 
 
 
-.logout{
+.wrapper ul .logout{
 	display: none;
 	
 }
 
+
+
 .main-section{
 	display: flex;
 }
-.box1{
-	border: 2px solid white;
-	border-radius: 10px;
-	padding: 10px 10px;
-}
-.box2{
-	border: 2px solid white;
-	border-radius: 10px;
-	padding: 10px 10px;
-	margin-top: 20px;
-}
-table{
-	border-collapse: separate;
-	border-spacing: 8px 4px;
 
-}
-td,th{
-	padding: 10px 10px;
-	background-color: white;
-}
-tbody{
-	text-align: center ;
-}
 
-@media screen and (max-width:700px){
-	
-	td{
-		display: block;
-		text-align: right;
-	}
-	th{
-		display: none;
-	}
-	td:nth-child(1)::before{
-		content: "Posts";
-	}
-	td:nth-child(2)::before{
-		content: "Likes";
-	}
-	td:nth-child(3)::before{
-		content: "Comments";
-	}
-	td:nth-child(4)::before{
-		content: "Shared";
-	}
-	
-	td.events:nth-child(4)::before{
-		content: "Dates";
-	}
-	td::before{
-		float: left;
-		margin-right: 3rem;
-	}
-}
 
 
 
@@ -320,10 +275,10 @@ tbody{
 	
 }
 
- .interface{
+.interface{
 
 	margin: 90px 0px 0 150px;
-} 
+}
 
 
 
@@ -349,6 +304,84 @@ tbody{
 
 
 
+.pics{
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px white;
+}
+.pics i{
+	color: #5fbe7d;
+	text-align: center;
+	line-height: 100px;
+	font-size: 80px;
+}
+
+
+.like, .share{
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px white;
+	margin-left: 20px;
+}
+
+.like i{
+	color: #5fbe7d;
+}
+
+.share i{
+	color: #5fbe7d;
+}
+
+
+.information{
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px white;
+	margin: 0 0px 0 20px;
+
+}
+
+
+.comment{
+    background-color: white;
+    box-shadow: 2px 2px 5px rgba(119, 116, 116, 0.267);
+    border-radius: 10px;
+    padding: 30px;
+    padding-left: 40px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+.comment h3{
+	font-weight: bold;
+}
+
+
+.like-btn{
+	border:none; 
+	background-color:transparent;
+	 outline:none;
+	  position: relative; 
+	top: -10px;
+}
+
+
+@media only screen and (min-width:768px) {
+	.interface{
+
+		margin: 50px 0px 0 100px;
+	}
+}
+
+
+@media only screen and (min-width:1100px) {
+	.interface{
+
+		margin: 70px 0px 0 300px;
+	}
+}
+
 
 
 
@@ -359,6 +392,30 @@ tbody{
 		display: flex;
 	}
 }	
+
+
+
+@media only screen and (max-width: 767px){
+
+	.like, .share{
+		
+		margin-left: 0%;
+	}
+	.share{
+		margin-left: 20px;
+		
+	}
+	
+
+	.information{
+		
+		margin: 25px 0 25px 0;
+	
+	}
+	
+
+}
+
 
 
 @media only screen and (max-width: 700px){
@@ -372,8 +429,28 @@ tbody{
 }
 
 .interface{
-	margin: 80px 0 0 0px;
+	margin: 80px 0 0 100px;
 }
+
+
+
+.wrapper .sidebar{
+	background: white;
+	top: 0;
+	left: 0;
+	margin-top: 80px;
+	padding: 20px 0;
+	border-radius: 0 60px 60px 0;
+	transition: all 0.5s ease;
+	box-shadow:  1px 1px 1px white;
+	overflow: hidden;
+	overflow-y: auto;
+	position: fixed;
+	top: 0;
+	 z-index: 999;
+	 margin-top: 100px;
+}
+
 
 
 }
@@ -415,7 +492,7 @@ margin-left: 40px;
 }
 
 .interface{
-	margin: 40px 0 0 0px;
+	margin: 40px 0 0 50px;
 }
 
 
@@ -427,11 +504,13 @@ margin-left: 40px;
 
 
 
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 575px){
 
-
+	.interface{
+		margin: 30px 0 0 0px;
+	}
 	
-
+	
 	.navTitle{
 		margin-left: 29px;
 }
@@ -441,3 +520,4 @@ margin-left: 40px;
 	
 }
 }
+

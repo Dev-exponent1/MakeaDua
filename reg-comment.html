@@ -6,8 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Settings</title>
-    <link rel="stylesheet" href="css/Settings.css">
+    <title>Registered user comment</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/reg-coment.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -119,40 +120,66 @@
 <!-- Data -->
 
  <section class="interface">
-       
-<div class="container">
-     <div class="row justify-content-center">
-            <div class="col-lg-9 col-md-12 col-sm-12 col-12">
-                <div class="settings col-lg-11 col-md-8 col-sm-8 col-12 pt-3">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-9 col-md-8 col-sm-8 col-8">
-                            <p>Personal Information</p>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-4">
-                            <a href="Account.html">Edit</a>
-                        </div>
+     
+       <div class="container">
+           <div class="row justify-content-center">
+               <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                   <div class="row justify-content-center">
+                       <div class="pics col-lg-3 col-md-3 col-sm-10 col-10 text-center pt-2">
+                             <i class="fas fa-user fa-4x"></i>
+                       </div>
+                       <div class="information col-lg-5 col-md-5 col-sm-10 col-10" style="font-weight: bold;">
+                           <p>Name: OLUSOLA  SARAKI </p>
+                           <p>About: OLUSOLA SARAKI was a great man, a great father indeed.</p>
+                           <P>Status: Funeral</P>
+                           <p>Date:12-10-2009 </p>
 
-
-                        <div class="col-lg-9 col-md-8 col-sm-8 col-8">
-                            <p>Shared Links </p>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-12 col-11">
+                        <div class="row justify-content-center">
+                        <div class="like col-sm-5 col-5">
+                            <i class="fas fa-heart"></i>
+                            <p><span class="number">6,030</span>likes</p>
                         </div>
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-4">
-                            <a href="#">Edit</a>
-                        </div>
-
-
-                        <div class="col-lg-9 col-md-8 col-sm-8 col-8">
-                            <p>Password Reset</p>
-                        </div>
-                        <div class="col-lg-3 col-md-4 col-sm-4 col-4">
-                            <a href="password-reset.html">Edit</a>
+                        <div class="share col-sm-5 col-5">
+                            <i class="fas fa-share"></i>
+                            <p><span class="number">2,030</span> shares</p>
                         </div>
                     </div>
+                  </div>
+                  <div>
+                  <div class="comment mt-5 ml-4" style="font-weight: bold;">
+                    <p> O Allah, forgive him and elevate his station among those who are guided. Send him along the path of those who came before, and forgive us and him, O Lord of the worlds, enlarge for him his grave and shed light upon him in it.</p>
                 </div>
-              
+                <div class="mr-5" style="float: right;">
+                    <a href="#" style="display: flex; text-decoration: none; color: black;">
+                     <i class="mr-2 fa-solid fa-share fa-2x"></i>
+                     <p style="font-size: 20px;">Share</p>
+                 </a>
+                 </div>
+                <div class="mr-4" style="float: right; display: flex; text-decoration: none; color: black;">
+                <button  class ="like-btn"  id="count" onclick="count()"><i class="mr-2 fa-regular fa-thumbs-up fa-2x"></i></button>
+                <span class="mr-1" style="font-size: 20px;" id="numbers">0</span>
+                <p style="font-size: 20px;">Like(s</p>
             </div>
-    </div>
-</div>
+            </div>
+                   </div> 
+                <div class="comment mt-5 ml-4">
+                    <h3>Azeez</h3>
+                    <p>Baba has been a great philanthropist during his lifetime and will forever in the heart of every Ilorin citizen. He was a ploitician that have the interest of the masses</p>
+                </div>
+                <div class="comment mt-3 ml-4">
+                    <h3>Aisha</h3>
+                    <p>Baba has been a great philanthropist during his lifetime and will forever in the heart of every Ilorin citizen. He was a ploitician that have the interest of the masses</p>
+                </div>
+                <div class="btn-wrap" style="float: right;">
+                    <button type="button" class="btn btn-success" id="more-btn"><a href ="comment.html" style="color: white; text-decoration: none;"> View others comment</a></button>
+                </div>
+               </div>
+               
+           </div>
+           
+        </div>
     </section>
 
 </section>
@@ -167,6 +194,16 @@ $(document).ready(function(){
         $('.wrapper').fadeToggle(1200);
     });
 })
+
+
+let counter = 0;
+let number = document.getElementById('numbers');
+function count(){
+    counter += 1;
+    number.innerHTML=counter;
+
+}
+
 
  </script>
 
