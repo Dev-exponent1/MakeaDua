@@ -82,8 +82,12 @@ h1{
 
 .form-text{
     display: none;
-    margin-top: -10px;
-    margin-bottom: 20px;
+    transform: translateY(-45px);
+}
+
+#emailerror{
+    display: none;
+    transform: translateY(-20px);
 }
 
 .btn-primary{

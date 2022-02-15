@@ -6,7 +6,8 @@ var number = document.getElementById("number");
 var length = document.getElementById("length");
 var fname = document.getElementById("fullname");
 var email = document.getElementById("email");  
-var form = document.getElementById("regform")
+var form = document.getElementById("regform");
+var generalerror = document.getElementById("errortext")
 
 function RestrictSpace() {
   if (event.key == "spacebar") {
@@ -115,6 +116,13 @@ var btn = document.getElementById("btn").addEventListener('click' , function(eve
     paswrd.classList.add("is-invalid"); 
   }
 
+  /*if account already exists*/
+  if (account = exist){
+    paswrd.value = "";
+    generalerror.classList.add("is-invalid");
+    /*input type of error here */
+    generalerror.innerHTML = "";
+  }
 })
 
 
