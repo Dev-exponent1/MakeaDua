@@ -41,10 +41,13 @@ myInput.onfocus = function() {
 }
 
 
+
 // When the user starts to type something inside the password field
 myInput.onkeyup = function() {
   // Validate lowercase letters
-
+  
+  paswrd.classList.remove("is-invalid");
+  
   var lowerCaseLetters = /[a-z]/g;
   if(myInput.value.match(lowerCaseLetters)) {
     letter.classList.remove("invalid");
@@ -95,6 +98,14 @@ myInput.onkeyup = function() {
 }
 
 
+email.onkeyup = function() {
+  email.classList.remove("is-invalid");
+}
+
+
+fname.onkeyup = function() {
+  fname.classList.remove("is-invalid");
+}
 
 var btn = document.getElementById("btn").addEventListener('click' , function(event){
   
