@@ -337,4 +337,11 @@ h5{
   .solid{
     padding-bottom: 30px;
   }
+  .submit {
+    padding-bottom: 30px;
+  }
+  
+  .submit:active {
+    padding-bottom: 30px;
+  }
 }
